@@ -14,11 +14,11 @@ int main(void){
     printf("Enter the Number that corresponds to the described symbol.\n");
     printf("\n1 - Circle\n2 - Black & White Circle Vertical\n3 - Black & White Circle Diagonal\n4 - Cross\n5 - X Black Start Down End Up\n6 - X Black Start Up End Down\n\n");
 
-    printf("Enter the first symbol > ");
+    printf("Enter the Symbol for X > ");
     scanf("%d", &x);
-    printf("Enter the second symbol > ");
+    printf("Enter the Symbol for Y > ");
     scanf("%d", &y);
-    printf("Enter the third symbol > ");
+    printf("Enter the Symbol for Z > ");
     scanf("%d", &z);
 
     variables(x,y,z, &X, &Y, &Z);
