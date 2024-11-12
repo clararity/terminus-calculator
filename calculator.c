@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-#include <Windows.h>
 
 void variables(int symbol1, int symbol2, int symbol3, int *X, int *Y, int *Z); // Turns the symbols provided by the user to their corresponding values
 
