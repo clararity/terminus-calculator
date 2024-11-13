@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <math.h>
 
-void variables(int symbol1, int symbol2, int symbol3, int *X, int *Y, int *Z); // Turns the symbols provided by the user to their corresponding values
+void symbolsToValues(int symbol1, int symbol2, int symbol3, int *X, int *Y, int *Z); // Turns the symbols provided by the user to their corresponding values
 
 // Program
 int main(void){
@@ -15,12 +15,32 @@ int main(void){
 
     printf("Enter the Symbol for X > ");
     scanf("%d", &x);
+    if(x < 1 || x > 6){
+        printf("You have entered an invalid number. Please close the program and try again.\n");
+        scanf("%c",&t);
+        scanf("%c",&t);
+        return 0;
+    }
+
     printf("Enter the Symbol for Y > ");
     scanf("%d", &y);
+    if(y < 1 || y > 6){
+        printf("You have entered an invalid number. Please close the program and try again.\n");
+        scanf("%c",&t);
+        scanf("%c",&t);
+        return 0;
+    }
+
     printf("Enter the Symbol for Z > ");
     scanf("%d", &z);
+    if(z < 1 || z > 6){
+        printf("You have entered an invalid number. Please close the program and try again.\n");
+        scanf("%c",&t);
+        scanf("%c",&t);
+        return 0;
+    }
 
-    variables(x,y,z, &X, &Y, &Z);
+    symbolsToValues(x,y,z, &X, &Y, &Z);
 
     // Finds Each Code
     int first = fabs((2*X+11));
@@ -35,7 +55,7 @@ int main(void){
 }
 
 // TODO - Find a simpler way to do this
-void variables(int symbol1, int symbol2, int symbol3, int *X, int *Y, int *Z){
+void symbolsToValues(int symbol1, int symbol2, int symbol3, int *X, int *Y, int *Z){
     switch(symbol1){
         case 1:
             *X = 0;
